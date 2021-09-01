@@ -1,0 +1,128 @@
+.signUp-container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.removeAnimation{
+    display: none;
+}
+
+.signUp{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+
+}
+
+.signUp-container select{
+    border: none;
+    outline: none;
+}
+
+.signUp-container form button{
+    margin-top: 20px;
+}
+
+@keyframes formAnimation {
+ from {
+     transform: translateX(-100px)
+ }
+ to{
+    transform: translateX(0)
+ }
+}
+
+.signUp-container form{
+    animation: formAnimation 1.5s
+}
+
+.signUp h1{
+    margin-bottom: 10px;
+    color: rgb(90, 90, 90)
+}
+
+.signUp h3{
+    margin-top: 10px;
+    animation: formAnimation 1.5s
+}
+.signUpChoose{
+   width: 100%;
+   justify-content: center;
+   align-items: center;
+   display: flex;
+   flex-direction: column;
+   margin-top: 20px;
+   margin-bottom: 20px;
+   
+}
+
+.signUpChoose-button-container{
+    display: flex;
+}
+
+.signUpChoose button{
+    border: none;
+    outline: none;
+    padding: 7px;
+    background-color: #000000;
+    background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
+    margin: 5px;
+    color: white;
+    cursor: pointer;
+    width: 100px;
+}
+
+
+
+.signUp select{
+    width: 100%; 
+    margin-top:10px;
+    
+}
+
+.signUpForm button{
+    border: none;
+    outline: none;
+    padding: 10px;
+    background-color: #000000;
+    background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
+    margin: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+.signUpForm{
+    align-items: center;
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+}
+
+.signUpContainerLinks{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    font-size: 18;
+}
+
+.signUpBackToHome a{
+    color: black;
+    font-size: 20px;
+}
+
+.signUpBackToHome{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.signUpBackToHome i{
+    font-size: 40px;
+}

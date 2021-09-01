@@ -1,0 +1,128 @@
+.courses-container{
+    width: 100vw;
+    height: 100%;
+    overflow-x: hidden;
+    padding-top: 80px;
+}
+
+.graduation{
+   height: 36vh;
+   background: linear-gradient(
+    rgba(0, 0, 0, 0.7), 
+    rgba(0, 0, 0, 0.7)
+  ),
+  url('../../assets/onlineClass.jpg');
+   background-size: cover;
+   background-repeat: no-repeat;
+   padding-left: 8%;
+   padding-top: 30px;
+   position: relative
+}
+.graduation h1{
+    color: #FFF;
+    font-size: 70px;
+}
+
+.options ul{
+    list-style: none;
+    display: flex;
+    position: absolute;
+    bottom: 20px;
+    left: 8%
+}
+
+.options ul li{
+    display: flex;
+    font-size: 25px;
+    margin-right: 50px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+
+.coursesContainer{
+  padding-left: 8%;
+  /* height: 57vh; */
+  padding-top: 50px;
+  height: 100%;
+  margin-bottom: 40px;  
+}
+
+.search{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 8%;
+}
+
+.search input{
+    width: 250px;
+    padding: 0px 10px;
+    align-items:  center;
+}
+
+.coursesContainer h2{
+    font-size: 30px;
+}
+
+.courses{
+    justify-content: center;
+    display: flex;
+    align-items:  center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+  
+}
+
+.card{
+ height:200px;
+ width: 250px;
+ border-radius:5px ;
+ border: 1px solid black;
+ cursor: pointer;
+ margin-left: 20px;
+ margin-top: 10px;
+ 
+}
+
+.card span{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.cardImg{
+    width:248px;
+    height: 150px;
+}
+
+@media (max-width:1024px){
+    .graduation{
+        height: 30vh;
+    }
+
+    .graduation h1{
+        font-size: 40px;
+    }
+
+    .options ul li{
+    font-size: 20px;
+    margin-right: 15px;
+}
+ .coursesContainer{
+    padding-left: 0;
+  } 
+
+  .card{
+    margin-left: 0px;
+  }
+
+  .search input{
+    width: 160px;
+}
+
+.coursesContainer h2{
+    font-size: 25px;
+    margin-left: 8%;
+}
+
+}

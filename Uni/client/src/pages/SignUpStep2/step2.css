@@ -1,0 +1,59 @@
+@keyframes formAnimation {
+    from {
+        transform: translateX(-100px)
+    }
+    to{
+       transform: translateX(0)
+    }
+   }
+
+.step2-container{
+    display: flex;  
+    justify-content:  center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.step2-info{
+    display: flex;
+    flex-direction: column;
+    justify-content:  center;
+    align-items: center;
+
+}
+
+.step2-info h1{
+    animation: formAnimation 1.5s
+}
+
+.step2-info form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    animation: formAnimation 1.5s
+
+}
+
+.step2-inputs{
+   margin-top: 20px;
+}
+
+.step2-info form input{
+    margin-top: 10px;
+    width: 100%;
+    padding: 5px;
+    border: none;
+    outline: none;   
+}
+
+.step2-info form button{
+    margin-top: 20px;
+    border: none;
+    outline: none;
+    padding: 7px;
+    background-color: #000000;
+    background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
+    color: white;
+    cursor: pointer;
+}

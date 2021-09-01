@@ -1,0 +1,110 @@
+.curso-container{
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    padding-top: 80px;
+}
+
+.course{
+    height: 30vh;
+    background: linear-gradient(
+     rgba(0, 0, 0, 0.7), 
+     rgba(0, 0, 0, 0.7)
+   ),
+   url('../../assets/onlineClass.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-left: 8%;
+    padding-top: 30px;
+    position: relative
+}
+
+.value{ 
+    height: 100%;
+    
+}
+
+.value button{
+    outline: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: transparent;
+}
+
+.value a{
+    color: white;
+    background-color: red;
+    padding: 8px;
+}
+
+.course h1{
+    color: #FFF;
+    font-size: 70px;
+}
+
+.content{
+    display: flex;
+    justify-content: space-between; 
+    flex-wrap: wrap;
+    padding: 30px 8%;
+   
+}
+
+.description{
+    display: flex;
+    flex-direction: column;
+}
+
+.description span:nth-child(1){
+    font-size: 25px;
+    margin-bottom: 20px
+}
+
+.description span{
+    font-size: 19px;
+    margin-bottom: 5px;
+    color: rgb(54, 54, 54)
+}
+
+.imgContainer{
+   width: 300px;
+   height: 350px;
+   border: 1px solid black;
+   align-items:  center;
+   display: flex;
+   flex-direction: column;
+}
+
+.imgContainer img{
+ 
+       height:200px;
+       width: 298px;
+}
+
+.value h3{
+    margin-bottom: 20px
+}
+
+.card span{
+ color: black;
+}
+@media (max-width:1024px){
+
+
+    .course h1{
+        font-size: 40px;
+    }
+
+    .value{
+        margin-top: 10px;
+    }
+
+    
+.content{
+    justify-content: center; 
+}
+
+}
