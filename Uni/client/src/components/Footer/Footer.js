@@ -21,6 +21,7 @@ function Footer() {
                   <Link to="/Graduações">Graduação</Link>
                   <Link to="/PósGraduações">Pós Graduação</Link>
                   <Link to="/EJA">EJA-Médio</Link>
+                  <Link to="/EJAFundamental-médio">EJA-Fundamental e Médio</Link>
                   <Link to="/Técnico">Técnico</Link>
                   <Link to="/Autentificação">Entrar</Link>
               </div>

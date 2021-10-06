@@ -21,10 +21,12 @@
 
 .value{ 
     height: 100%;
+    flex:1;
+    margin-left: 60px
     
 }
 
-.value button{
+/*.value button{
     outline: none;
     border: none;
     display: flex;
@@ -32,17 +34,40 @@
     align-items: center;
     width: 100%;
     background-color: transparent;
+} */
+
+.value button{
+    margin-left: 5px;
+    border: none;
+    outline: none;
+    color: white;
+    background: orange;
+    padding: 10px 10px;
+    cursor: pointer;
+    transition: 0.2s;
+   }
+
+   .value button:hover{
+    background: purple
 }
 
 .value a{
     color: white;
+}
+
+.value span{
+    color: red
+}
+
+/*.value a{
+    color: white;
     background-color: red;
     padding: 8px;
-}
+} */
 
 .course h1{
     color: #FFF;
-    font-size: 70px;
+    font-size: 55px;
 }
 
 .content{
@@ -56,18 +81,23 @@
 .description{
     display: flex;
     flex-direction: column;
+    flex: 2
 }
 
 .description span:nth-child(1){
     font-size: 25px;
-    margin-bottom: 20px
+    margin-bottom: 20px;
+    color: black;
 }
 
 .description span{
-    font-size: 19px;
+    font-size: 17px;
     margin-bottom: 5px;
-    color: rgb(54, 54, 54)
+    /*color: rgb(54, 54, 54) */
+    color: rgb(83, 83, 83);
 }
+
+
 
 .imgContainer{
    width: 300px;
@@ -100,6 +130,10 @@
 
     .value{
         margin-top: 10px;
+        margin-left: 0px;
+        display: flex;
+        justify-content:  center;
+        align-items:  center;
     }
 
     

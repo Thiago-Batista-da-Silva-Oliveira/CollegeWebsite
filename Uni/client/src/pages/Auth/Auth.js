@@ -1,10 +1,17 @@
 import React, {useState} from 'react';
 import {Link} from 'react-router-dom'
+import { useHistory } from "react-router-dom";
 import "./Auth.css"
+
+
 function Auth() {
+
+ const history = useHistory()
  const [isSignUp] = useState(false)
  const [email, setEmail] = useState('')
  const [password, setPassword] = useState('')
+
+    
 
  /*function handleToggle(e) {
      setIsSignUp(!isSignUp)
@@ -12,6 +19,10 @@ function Auth() {
 
  function HandleSubmit (e) {
       e.preventDefault()
+
+      if(!isSignUp) {
+          history.push('/ÁreaDoAluno')
+      } 
 
       setEmail("")
       setPassword("")
@@ -31,8 +42,9 @@ function Auth() {
 
                   <Link to="/Matrícula">Ainda não está matriculado ?</Link>
               </form>
-              <Link to="/">Voltar para o início</Link>
+              <Link to="/">Esqueceu o seu usuário ou senha?</Link>
             </div>
+            <div className="signUpBackToHome"> <Link to="/"> <i class="far fa-arrow-alt-circle-left"></i> </Link></div> 
         </div>
       </>
     )

@@ -1,0 +1,101 @@
+@keyframes formAnimation {
+    from {
+        transform: translateX(-100px)
+    }
+    to{
+       transform: translateX(0)
+    }
+   }
+
+.step3-container{
+    display: flex;  
+    justify-content:  center;
+    align-items: flex-start;
+    height: 100vh;
+    width: 100vw;
+}
+
+
+.step3-info h1{
+    animation: formAnimation 1.5s;
+    margin-top: 50px;
+    text-align: center;
+}
+
+
+.step3-info form{
+    display: flex;
+    margin-top: 20px;
+    animation: formAnimation 1.5s;
+    flex-direction: column;
+}
+
+.form-container-step3{
+    
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.step3-inputs{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+/*.step3-inputs span{
+   color: red;
+   margin-top: 5px;
+   max-width: 200px;
+   display: none;
+} */
+
+/*.cnh:hover span{
+    display: block
+} */
+
+.step3-inputs label{
+   cursor: pointer;
+   margin-top: 5px;
+   background-color: rgb(57, 116, 139);
+   color: white;
+   width: 200px;
+   border-radius: 50px;
+   padding: 3px;
+   text-align: center;
+
+}
+
+.step3-inputs span{
+    font-size: 19px;
+}
+
+.step3-inputs input{
+  
+   display: none;
+ }
+
+
+ .step3-info form button{
+    margin-top: 20px;
+    border: none;
+    outline: none;
+    padding: 7px;
+    background-color: #000000;
+    background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
+    color: white;
+    cursor: pointer;
+}
+
+.form-container-step3 label{
+    font-size: 18px;
+}
+
+
+@media (max-width: 600px){
+    .step3-inputs{
+        justify-content: center;
+        align-items: center;
+    }
+    
+}

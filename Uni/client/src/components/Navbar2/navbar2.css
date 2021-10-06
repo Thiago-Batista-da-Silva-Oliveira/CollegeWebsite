@@ -6,6 +6,8 @@
     background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
     color: white;
     padding: 0 100px;
+    z-index: 1000;
+    align-items:center
 }
 
 .navbar2-container{
@@ -17,6 +19,15 @@
 
 }
 
+.navbar2-login{
+    display: flex;
+    
+}
+
+.navbar2 a {
+    text-decoration: none;
+    color: white;
+}
 .navbar2 button{
     border: none;
     outline: none;
@@ -29,6 +40,10 @@
 @media screen and (max-width: 1024px){
     .navbar2{
         padding: 0;
+    }
+
+    .acompanhe{
+        display: none
     }
 
     

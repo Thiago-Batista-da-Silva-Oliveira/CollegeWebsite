@@ -14,6 +14,7 @@ function SignUp() {
     const [EJAFundMédio, setEJAFundMédio] = useState(false)
     const [curso, setCurso] = useState('')
     const [polo, setPolo] = useState('Santa Cruz')
+    const [opção, setOpção] = useState('')
     const {setSelectedDatas} = useContext(AuthContext)
     const history = useHistory()
     
@@ -29,7 +30,7 @@ function SignUp() {
     }
     const handlePosGraduação = () =>{
         setPosGraduação(true)
-        setCurso('Letras Português-Inglês')
+        setCurso('Aconselhamento Pastoral')
         setGraduação(false)
         setGraduaçãoSequencial(false)
         setTécnico(false)
@@ -57,6 +58,8 @@ function SignUp() {
     const handleEJAMédio = () =>{
         setEJAMédio(true)
         setPosGraduação(false)
+        setCurso('Eja-Médio')
+        setOpção('Ainda não comecei')
         setGraduação(false)
         setGraduaçãoSequencial(false)
         setTécnico(false)
@@ -65,6 +68,8 @@ function SignUp() {
     const handleEJAFundMédio = () =>{
         setEJAFundMédio(true)
         setPosGraduação(false)
+        setCurso('Eja Fundamental e Médio')
+        setOpção('Ainda não comecei')
         setGraduação(false)
         setGraduaçãoSequencial(false)
         setTécnico(false)
@@ -74,8 +79,13 @@ function SignUp() {
 
     const handleSubmit = (e) =>{
       e.preventDefault()
-      const datas = {curso,polo}
-      setSelectedDatas(datas)
+      const datas = {curso,polo,opção}
+
+      localStorage.setItem('step1Form', JSON.stringify(datas))
+
+
+      setSelectedDatas(JSON.parse(localStorage.getItem('step1Form')))
+      
       history.push('/MatrículaStep2')
     }
 
@@ -96,6 +106,9 @@ function SignUp() {
       }, [])
     return (
         <div className="signUp-container">
+            <div className="steps">
+                <span><strong>1/4</strong></span>
+            </div>
             <div className="signUp">
                
                 <h1 >Bem Vindo!</h1>
@@ -141,7 +154,7 @@ function SignUp() {
                 <form onSubmit={handleSubmit} className="signUpForm">
                   <select onChange={(e) => setCurso(e.target.value)}>
                       {
-                          data.courses.map((course) => (
+                          data.posGrad.map((course) => (
                              <option  key={course.alt}>{course.text}</option>
                           ))
                       }
@@ -198,34 +211,43 @@ function SignUp() {
                  {EJAMédio && (
                    <>
                 <h3>Agora escolha até onde concluiu o ensino médio e o pólo</h3>
-                <form  className="signUpForm">
-                  <select>
-                      <option   value="NãoComecei">Ainda não comecei</option>
-                      <option  value="PrimeiroAno">Já completei o primeiro ano</option>
-                      <option  value="SEgundoAno">Já completei o segundo ano</option>
+                <form onSubmit={handleSubmit}  className="signUpForm">
+                  <select onChange={(e) => setOpção(e.target.value)}>
+                      <option  >Ainda não comecei</option>
+                      <option  >Já completei o primeiro ano</option>
+                      <option  >Já completei o segundo ano</option>
                   </select>
                   <select onChange={(e) => setPolo(e.target.value)} >
                       <option  >Santa Cruz</option>
                       <option  >Campo Grande</option>
                       <option   >Tijuca</option>
                   </select>
-                  <button>Prosseguir</button>
+                  <button type="submit">Prosseguir</button>
                 </form>
                 </>
                 )}
                  {EJAFundMédio && (
                    <>
                 <h3>Agora escolha até onde concluiu o ensino fundamental e o pólo</h3>
-                <form className="signUpForm">
-                  <select>
-                    <option  value="NãoComecei">Ainda não comecei</option>
+                <form onSubmit={handleSubmit} className="signUpForm">
+                  <select onChange={(e) => setOpção(e.target.value)}>
+                    <option  >Ainda não comecei</option>
+                    <option  >Já completei o primeiro ano</option>
+                    <option  >Já completei o segundo ano</option>
+                    <option  >Já completei o terceiro ano</option>
+                    <option  >Já completei o quarto ano</option>
+                    <option  >Já completei o quinto ano</option>
+                    <option  >Já completei o sexto ano</option>
+                    <option  >Já completei o sétimo ano</option>
+                    <option  >Já completei o oitavo ano</option>
+                   
                   </select>
                   <select onChange={(e) => setPolo(e.target.value)} >
                       <option    >Santa Cruz</option>
                       <option   >Campo Grande</option>
                       <option   >Tijuca</option>
                   </select>
-                  <button>Prosseguir</button>
+                  <button type="submit">Prosseguir</button>
                 </form>
                 </>
                 )}

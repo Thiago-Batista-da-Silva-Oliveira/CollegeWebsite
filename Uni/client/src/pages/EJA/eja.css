@@ -58,6 +58,13 @@
     cursor: pointer
  }
 
+ .yellowbook{
+    color: orange;
+    font-size: 17px;
+    margin-bottom: 5px;
+    cursor: pointer
+ }
+
 .Eja-purchase{
     margin-top: 5px
 }
@@ -71,6 +78,11 @@
  padding: 10px 10px;
  cursor: pointer;
  transition: 0.2s;
+}
+
+.Eja-purchase button a{
+    color: white;
+    text-decoration: none;
 }
 
 .Eja-purchase input{

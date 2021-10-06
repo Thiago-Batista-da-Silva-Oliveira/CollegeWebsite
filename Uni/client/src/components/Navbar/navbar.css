@@ -8,7 +8,7 @@
     align-items: center;
     display:flex;
     height: 80px;
-    z-index: 2;
+    z-index: 999;
     background-color: transparent !important
 }
 
@@ -62,21 +62,31 @@
 .dropdown {
     position: relative;
     display: flex;
+    height: 79px;
+    align-items: center;
+    
+    
   }
   
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: rgb(75, 75, 75);
-    min-width: 80px;
+    /*background-color: rgb(75, 75, 75); */
+    /*min-width: 80px; */
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 12px 16px;
+    padding: 12px 0;
     z-index: 99999;
     flex-direction:  column;
-    top: 20px;
-    border-radius: 5px;
+    top: 77px;
+    /*right: 5px; */
+    /*border-radius: 5px; */
+    background-color: #000000;
+    background-image: linear-gradient(315deg, #000000 0%, #414141 74%); 
   }
-  
+  .no-scroll {
+    top: 60px;
+  }
+
   .dropdown:hover .dropdown-content {
     display: flex;
    
@@ -184,7 +194,11 @@
      background: white;
      color: black;
      transition: all 0.5s ease;
-     z-index: 3;
+     z-index: 999;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     
     
  }
 
@@ -237,11 +251,34 @@
  .social{
      display: flex;
      justify-content: center;
-     align-items: flex-end;
-     height: 300px
+     align-items: center;
+     padding-bottom: 60px;
+     flex-direction: column;
+    /* position: absolute;
+     bottom: 0;*/
+     background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
+    
+
  }
 
-  .icons{
+ 
+ .social a{
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    padding: 0 40px;
+    margin-top: 10px;
+   width:100%;
+   border-bottom: 1px solid gray;
+   transition: all 0.5s ease;
+}
+
+.social a:hover{
+    color:red;
+    transition: all 0.5s ease;
+}
+
+  /*.icons{
       display: flex;
       justify-content: center;
       align-items: flex-end;
@@ -260,7 +297,7 @@
       color: red;
       transition: all 0.5s ease;
     
-  }
+  } */
 
   .navbar-btn{
       padding: 5px;

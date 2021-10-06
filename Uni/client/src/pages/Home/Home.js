@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
 import {Link} from 'react-router-dom'
 import './home.css'
 import Navbar from '../../components/Navbar/Navbar'
@@ -7,8 +7,14 @@ import Footer from '../../components/Footer/Footer'
 import data from '../../data'
 import Featured from '../../components/Featured'
 import HomeSlider from '../../components/HomeSlider'
+import { AuthContext } from '../../context/authContext'
+
 
 const Home = () => {
+
+  const {handleSlideClickRight,
+    handleSlideClickLeft,
+    slideIndex, setSlideIndex} = useContext(AuthContext)
 
   useEffect(() => {
     const target = document.querySelectorAll('[data-anime]')
@@ -42,17 +48,40 @@ const Home = () => {
       animeRemove()
     }, [2000])
 
+    useEffect(() =>{
+      const timer =  setTimeout(() =>{
+            if(slideIndex < 2){
+              setSlideIndex(slideIndex +1)
+               
+            }
+            if(slideIndex ===2){
+              setSlideIndex(0)
+            }
+            }, 10000)
+    
+            return () =>{
+                clearTimeout(timer)
+            }
+     }, [slideIndex,setSlideIndex]) 
+
     return (
         <>
         <div className="teste">
         <Navbar2 />
         <Navbar />
-        
-     <div className="container" >
-       
-           <HomeSlider />
-          
+        <div onClick={handleSlideClickLeft} className="home-slider-left">
+              <i  class="far fa-arrow-alt-circle-left"></i>
+              </div>
 
+              <div onClick={handleSlideClickRight} className="home-slider-right">
+        <i  class="far fa-arrow-alt-circle-right"></i>
+        </div>
+
+        
+     <div className={slideIndex === 0 ?"container" : slideIndex === 1 ? "container slide2" : "container slide3"} >
+    
+           <HomeSlider />
+        
         
      </div>
 
@@ -64,7 +93,7 @@ const Home = () => {
 
         <div className='courses_info_'>
           <div className='courses-type'>
-            <Link to="/EJA">
+            <Link to="/EJAFundamental-médio">
             <h2>EJA Fundamental e Médio</h2>
             <p>É destinada a jovens e adultos que não deram continuidade em seus estudos.</p>
             </Link>

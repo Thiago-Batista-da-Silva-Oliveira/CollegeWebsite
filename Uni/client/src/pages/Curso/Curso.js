@@ -12,7 +12,7 @@ const Curso = (props) => {
       
          const {id} =  useParams()
 
-         const dataCourse =  data.courses.find(e => e.alt === id)  || data.tecCourses.find(e => e.alt === id)  || data.sequencialsCourses.find(e => e.alt === id) 
+         const dataCourse =  data.courses.find(e => e.alt === id)  || data.tecCourses.find(e => e.alt === id)  || data.sequencialsCourses.find(e => e.alt === id) || data.posGrad.find(e => e.alt === id)
        
               
      
@@ -28,10 +28,7 @@ const Curso = (props) => {
         <div className='content'>
              <div className='description'>
                <span>Então deseja seguir a área de {dataCourse?.alt}?</span>
-                   <span>{dataCourse?.description}</span>
-                   <span>{dataCourse?.description}</span>
-                   <span>{dataCourse?.description}</span>
-                   <span>{dataCourse?.description}</span>
+                   <span >{dataCourse?.description}</span>
              </div>
 
              <div className='value'>
@@ -42,7 +39,7 @@ const Curso = (props) => {
                   <div >
                        <img src={dataCourse?.img}  alt={dataCourse?.alt}/>
                   </div>
-                  <h3>Investimento: {dataCourse?.value}</h3>
+                  <h3>Investimento: <span>{dataCourse?.value}</span></h3>
                   <button>
                     <Link to="/Matrícula">Inscreva-se</Link>
                   </button>

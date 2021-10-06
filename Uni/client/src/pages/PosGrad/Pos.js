@@ -4,20 +4,20 @@ import data from '../../data'
 import Navbar from '../../components/Navbar/Navbar'
 import Footer from '../../components/Footer/Footer'
 function Cursos() {
-    const [todos, setTodos] = useState(true)
-    const [exatas , setExatas ] = useState(false)
-    const [humanas, setHumanas] = useState(false)
+    const [todos] = useState(true)
+    const [exatas  ] = useState(false)
+    const [humanas] = useState(false)
     //const [bioMédicas, setBioMédicas] = useState(false)
 
     const [search, setSearch] = useState('')
 
-    const dataSearch = data.courses.filter(course => course.alt.toLowerCase().includes(search.toLowerCase()))
-    const dataSearchExatas = data.coursesExatas.filter(course => course.alt.toLowerCase().includes(search.toLowerCase()))
-    const dataSearchHumanas = data.coursesHumanas.filter(course => course.alt.toLowerCase().includes(search.toLowerCase()))
+    const dataSearch = data.posGrad.filter(course => course.alt.toLowerCase().includes(search.toLowerCase()))
+    //const dataSearchExatas = data.posGradExatas.filter(course => course.alt.toLowerCase().includes(search.toLowerCase()))
+    //const dataSearchHumanas = data.posGradHumanas.filter(course => course.alt.toLowerCase().includes(search.toLowerCase()))
     //const dataSearchBioMédicas = data.coursesBioMédicas.filter(course => course.alt.toLowerCase().includes(search.toLowerCase()))
 
 
-    function handleTodos(){
+    /*function handleTodos(){
         setTodos(true)
         setExatas(false)
         setHumanas(false)
@@ -51,13 +51,7 @@ function Cursos() {
               <h1>Pós Graduação</h1>
 
             <div className='options'>
-                <nav>
-                    <ul>
-                        <li className={todos ? 'red' : 'gray'} onClick={handleTodos}>Todos</li>
-                        <li className={exatas ? 'red' : 'gray'} onClick={handleExatas}>Exatas</li>
-                        <li className={humanas ? 'red' : 'gray'}onClick={handleHumanas}>Humanas</li>
-                    </ul>
-                </nav>
+                
             </div>
         </div>
         <div className='coursesContainer'>
@@ -76,16 +70,7 @@ function Cursos() {
                         <Cart key={info.alt} id={info.alt} text={info.text} img={info.img} alt={info.alt} />
                     )
                 })}
-                 {dataSearchExatas && exatas && dataSearchExatas.map(info =>{
-                    return(
-                        <Cart key={info.alt} id={info.alt} text={info.text} img={info.img} alt={info.alt} />
-                    )
-                })}
-                {dataSearchHumanas && humanas && dataSearchHumanas.map(info =>{
-                    return(
-                        <Cart type={info.type} key={info.alt} id={info.alt} text={info.text} img={info.img} alt={info.alt} />
-                    )
-                })}
+               
             </div>
         </div>
 

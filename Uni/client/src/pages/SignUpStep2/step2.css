@@ -11,7 +11,7 @@
     display: flex;  
     justify-content:  center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
 }
 
@@ -24,15 +24,23 @@
 }
 
 .step2-info h1{
-    animation: formAnimation 1.5s
+    animation: formAnimation 1.5s;
+    margin-top: 45px;
+    text-align: center;
 }
 
 .step2-info form{
     display: flex;
-    flex-direction: column;
     margin-top: 20px;
-    animation: formAnimation 1.5s
+    animation: formAnimation 1.5s;
+    flex-direction: column;
+}
 
+.form-container{
+    display: flex;
+    justify-content:  space-evenly;
+    padding: 5px;
+   
 }
 
 .step2-inputs{
@@ -47,6 +55,16 @@
     outline: none;   
 }
 
+
+.step2-info form select{
+    margin-top: 10px;
+    width: 100%;
+    padding: 5px;
+    border: none;
+    outline: none;   
+}
+
+
 .step2-info form button{
     margin-top: 20px;
     border: none;
@@ -57,3 +75,12 @@
     color: white;
     cursor: pointer;
 }
+
+.flex1{
+    flex: 1
+}
+
+.ml-5{
+    margin-left: 5px
+}
+

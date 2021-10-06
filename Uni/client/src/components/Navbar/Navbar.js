@@ -46,12 +46,14 @@ const Header = ({color}) => {
                     <Link className={path === '/Sobre'? 'addColor': ''} to="/Sobre">Sobre</Link>
                     <div className="dropdown">
                     <span>Nossos Cursos</span>
-                        <div className='dropdown-content'>
+                        <div className={isScrolled?'dropdown-content' : 'dropdown-content no-scroll'}>
                         <Link  activeClassName="active" to="/Graduações">Graduação</Link>
                         <Link  to="/PósGraduações">Pós Graduação</Link>
                         <Link  to="/CursosSequenciais">Cursos Sequenciais</Link>
-                        <Link  to="/EJA">EJA-Médio</Link>
                         <Link  to="/Técnico">Técnico</Link>
+                        <Link  to="/EJA">EJA-Médio</Link>
+                        <Link  to="/EJAFundamental-médio">EJA-Fundamental e Médio</Link>
+                      
                         </div>
                     </div>
                     <button className='navbar-btn'><Link to="/Matrícula">Inscreva-se</Link></button>
@@ -78,17 +80,17 @@ const Header = ({color}) => {
                         <Link  to="/Graduações">- Graduação</Link>
                         <Link  to="/PósGraduações">- Pós Graduação</Link>
                         <Link  to="/CursosSequenciais">- Cursos Sequenciais</Link>
-                        <Link  to="/EJA">- EJA-Médio</Link>
                         <Link  to="/Técnico">- Técnico</Link>
+                        <Link  to="/EJA">- EJA-Médio</Link>
+                        <Link  to="/EJAFundamental-médio">- EJA-Fundamental e Médio</Link>
+                       
                     </div>
-                    <Link to="/Matrícula">Inscreva-se</Link>
+                   
                 </div>
                 <div className='social'>
-              <div className='icons'>
-              <i className="fab fa-facebook-f"></i>
-              <i className="fab fa-twitter"></i>
-              <i className="fab fa-instagram"></i>
-              </div>
+                <Link to="/Matrícula">Inscreva-se</Link>
+                <Link to="/Autentificação">Área do Aluno</Link>
+                <Link to="/Matrícula">Acompanhe sua matrícula</Link>
           </div>
           </div>
         

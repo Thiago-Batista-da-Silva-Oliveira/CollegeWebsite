@@ -1,10 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { Link } from 'react-router-dom'
 import Footer from '../../components/Footer/Footer'
 import Navbar from '../../components/Navbar/Navbar'
 import './eja.css'
 function Cursos() {
 
-    const [selectedvalue, setSelectedValue] = useState(1)
+  //  const [selectedvalue, setSelectedValue] = useState(1)
   
 
     return (
@@ -30,12 +31,13 @@ function Cursos() {
               <h3>R$ 1.250,00</h3>
               <div className="Eja-spans">
               <span >Cursos Incluidos</span>
-              <span><i class="fas fa-book-open"></i> Eja-Ensino Médio</span>
+              <span><i class="fas fa-book-open"></i> Eja Ensino Médio</span>
               <span><strong>EJA Ensino Médio</strong>: destinada a alunos maiores de 18 anos que não completaram o Ensino Médio, que completa a Educação Básica no Brasil. Ao concluir essa etapa, o aluno está preparado para realizar provas de vestibular e Enem, para ingressar em universidades.
              O tempo médio de conclusão é de 18 meses.</span>
              <div className="Eja-purchase">
-                <input type="text" value={selectedvalue} onChange={(e) => setSelectedValue(e.target.value)} />
-                 <button>Comprar</button>
+                {//<input type="text" value={selectedvalue} onChange={(e) => setSelectedValue(e.target.value)} />
+                }
+                 <button> <Link to="/Matrícula">Inscreva-se</Link></button>
              </div>
              </div>
             </div>
